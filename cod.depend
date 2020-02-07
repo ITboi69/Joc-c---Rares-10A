@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1581076518 source:c:\users\elev\desktop\proiecte c++\cod\main.cpp
+	<iostream>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+
