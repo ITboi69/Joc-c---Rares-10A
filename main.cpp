@@ -16,6 +16,7 @@ int main ()
         Secret = rand() % 100 + 1;
         system("cls");
         nr=0;
+        maxx=0;
         do
         {
             cout<<"Choose your difficulty:"<<"\n"<<"\n";
@@ -43,7 +44,9 @@ int main ()
             else if(strcmp(a,"VERY HARD")==0)
                 maxx=2;
             else if(strcmp(a,"INSANE")==0)
+            {
                 maxx=1;
+            }
             system("cls");
         }
         while(maxx==0);
@@ -63,10 +66,12 @@ int main ()
         while (Secret!=Guess && nr<maxx);
 
         system("cls");
-        if(nr==maxx)
+        if(nr==1 && nr==maxx && Secret==Guess)
+            cout<<"Congratulations! You guessed the number in "<<nr<<" tries"<<"\n"<<"The secret number was "<<Secret<<"\n";
+        else if(nr==maxx)
             cout<<"GAME OVER!"<<"\n"<<"The secret number was "<<Secret<<"\n";
         else
-            cout<<"Congratulations!"<<"\n"<<"The secret number was "<<Secret<<"\n";
+            cout<<"Congratulations! You guessed the number in "<<nr<<" tries"<<"\n"<<"The secret number was "<<Secret<<"\n";
 
         cout<<"Want to try again ? (Yes/No)  ";
         cin>>yes;
